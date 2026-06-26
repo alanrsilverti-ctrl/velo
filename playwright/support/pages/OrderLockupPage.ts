@@ -23,6 +23,9 @@ export class OrderLockupPage {
         await this.page.getByRole('button', { name: 'Buscar Pedido' }).click()
     }
 
+    async validadepageloaded() {
+        await expect(this.page.getByRole('heading')).toContainText('Consultar Pedido')
+    }
 
     async validateOrderDetails(order: OrderDetailsDetails) {
 
